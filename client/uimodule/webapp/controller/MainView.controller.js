@@ -234,7 +234,7 @@ sap.ui.define(
               oRouter.navTo("refused")
               break;
             default:
-              oRouter.navTo("error")
+              oRouter.navTo("refused")
               break;
           }
         }
