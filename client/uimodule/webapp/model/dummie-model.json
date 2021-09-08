@@ -1,0 +1,39 @@
+ {
+     "directions":[
+
+     {
+        "street": "Avinguda mare de deu del pilar",
+        "street_number": "28",
+        "postalCode": "08320",
+        "country": "Spain",
+        "City": "Barcelona",
+        "phone":"+34 611189371"
+
+
+
+    },
+  {
+        "street": "sant pere mitja",
+        "street_number": "7",
+        "postalCode": "08003",
+        "country": "Spain",
+        "City": "Barcelona",
+        "phone":"+34 611189371"
+
+
+
+    },
+    {
+        "street": "Gran Via de les corts catalanes ",
+        "street_number": "515",
+        "postalCode": "08015",
+        "country": "Spain",
+        "City": "Barcelona",
+        "phone":"+34 611189371"
+
+
+
+    }
+]
+
+}

@@ -1,0 +1,62 @@
+ <mvc:View controllerName="redfig.checkout.controller.MainView"
+  displayBlock="true"
+  xmlns:html="http://www.w3.org/1999/xhtml"
+  xmlns="sap.m"
+  xmlns:l="sap.ui.layout"
+  xmlns:core="sap.ui.core"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:grid="sap.ui.layout.cssgrid"
+  xmlns:card="sap.f.cards" xmlns:f="sap.f">
+  <App id="idAppControl" >
+         <Wizard
+          width='100%'
+          backgroundDesign='Solid' finishButtonText='checkout' enableBranching='true'
+          id='checkoutWizard' showNextButton="false" >
+             <WizardStep
+             subsequentSteps="ProductDisplay,NewDirection"
+             icon="sap-icon://shipping-status"
+             id='wizard1'>
+             <core:Fragment fragmentName="redfig.checkout.view.Directions" type="XML"/>
+             <FlexBox justifyContent='Center' >
+             <Button text='Add new Direction' press='showSide'/>
+             </FlexBox>
+              
+             
+             </WizardStep>
+             <WizardStep
+             id='ProductDisplay'
+             nextStep='PaymentMethod'
+             icon='sap-icon://product'>
+             <core:Fragment fragmentName="redfig.checkout.view.Products" type="XML"/>
+             
+
+             </WizardStep>
+             <WizardStep
+             id='NotSaveProductDisplay'
+             nextStep='PaymentMethod'
+             icon='sap-icon://product'>
+             <core:Fragment fragmentName="redfig.checkout.view.Products" type="XML"/>
+             
+
+             </WizardStep>
+              <WizardStep
+             subsequentSteps="ProductDisplay"
+             id='NewDirection'
+             icon='sap-icon://add'>
+
+             <core:Fragment fragmentName="redfig.checkout.view.AddDirection" type="XML"/>
+             
+
+             </WizardStep>
+           
+             <WizardStep
+             icon='sap-icon://money-bills'
+             id='PaymentMethod'
+             title='Payment'>
+         
+             <FlexBox id="paymentMethod"  justifyContent='Center' ></FlexBox> 
+             
+             </WizardStep>
+          </Wizard>
+  </App>
+</mvc:View>

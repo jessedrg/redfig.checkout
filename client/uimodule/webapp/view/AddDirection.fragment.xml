@@ -1,0 +1,66 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:f="sap.f"
+	xmlns:card="sap.f.cards"
+	xmlns:grid="sap.ui.layout.cssgrid"
+	displayBlock="true"
+	height="100%">
+	<FlexBox justifyContent='Center'>
+	<f:Card class="sapUiMediumMargin" width="500px" height='450px' id="formDirection">
+		<f:header>
+			<card:Header title="Direction" subtitle="Enter New Direction" iconSrc='sap-icon://add' />
+		</f:header>
+		<f:content width='100%'>
+		
+		<VBox class="sapUiResponsiveMargin" justifyContent='Center' >
+		
+		
+		
+		<Label text='Country' labelFor='city' class="sapUiSmallMarginEnd"/>
+		<ComboBox id="Country" selectionChange="onSearch"
+        value="{getForm>/country}"
+        items="{ path:'countryModel>/selectCountry' }">
+       <core:ListItem  text="{countryModel>name}"/>
+       </ComboBox>
+		
+		
+		<Label text='ZIP code/City' labelFor='zip'/>
+		<HBox>
+		<Input id='zip' class="sapUiSmallMarginBottom" value="{getForm>/postalCode}"  placeholder='Enter ZIP' />
+		<Input  class="sapUiSmallMarginBottom" value="{getForm>/City}" placeholder='Enter City' />
+		</HBox>
+		
+		
+		
+		<Label text='Street' labelFor='number/Street'/>
+		<HBox>
+		<Input id='Street_number' class="sapUiSmallMarginBottom" value="{getForm>/street_number}" placeholder='Enter Number' />
+		<Input id='Street' class="sapUiSmallMarginBottom" value="{getForm>/street}" placeholder='Enter Street' />
+		</HBox>
+		<Label text='Phone' labelFor='Street'/>
+		
+		<ComboBox id="phonePrefix" selectionChange="onSearch"
+        value="{getForm>/phone}"
+        items="{ path:'phonePrefix>/countries' }">
+       <core:ListItem  text="{phonePrefix>code}"/>
+       </ComboBox>
+		
+		
+		<FlexBox justifyContent='SpaceBetween'>
+		<Button text='Save' type="Accept" press='saveDirection'/>
+		<Button text='Use without saving' press='withOutSaving' type="Accept"/>
+		<Button text='Cancel' press='cancelButton' type="Reject"/>
+		</FlexBox>
+		
+		</VBox>
+		
+		
+		
+
+		
+		</f:content>
+	</f:Card>
+	</FlexBox>
+</core:FragmentDefinition>
+

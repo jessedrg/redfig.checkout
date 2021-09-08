@@ -1,0 +1,36 @@
+{
+    "products":[
+        {
+            "product":"macBook",
+            "description":"new macbook with all the freatures",
+            "img":"https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/macbook-pro-13-og-202011?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1604347427000",
+            "price":"1450"
+
+
+        },
+        {
+            "product":"iphone 11pro max",
+            "description":"old iphone I don't like",
+            "img":"https://img.pccomponentes.com/articles/23/232952/iphone-11-pro-max-space-select-2019-geo-emea.jpg",
+            "price":"700"
+
+
+        },
+        {
+            "product":"iphone 12 pro max",
+            "description":"iphone i'm gonna buy when matt pass me full time",
+            "img":"https://www.gestiomatica.es/wp-content/uploads/2020/10/iphone12pro-min.png",
+            "price":"1100"
+
+
+        },
+        {
+            "product":"bentley gt",
+            "description":" car im gonna buy when i make my own company",
+            "img":"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/arden-bentley-gt-front-1569668389.jpg",
+            "price":"120000"
+
+
+        }
+    ]
+}

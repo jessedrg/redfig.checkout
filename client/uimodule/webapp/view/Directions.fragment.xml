@@ -1,0 +1,29 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:grid="sap.ui.layout.cssgrid" xmlns:card="sap.f.cards" xmlns:f="sap.f" xmlns:core="sap.ui.core">
+
+<f:GridList id='directions' class='sapuiMediumMargin'
+items="{dummieModel>/directions}">
+
+
+   <f:GridListItem  height="800px"   >
+	<f:Card class='sapuiMediumMargin' >
+    <f:header>
+    <card:Header title="Direction"  subtitle="Send to" iconSrc='sap-icon://car-rental'/>
+    </f:header>
+    <f:content>
+      <VBox height="220px" class="sapUiResponsiveMargin"  justifyContent="SpaceBetween">
+       <Title text='{dummieModel>country}'/>
+       <Title text='{dummieModel>postalCode} {dummieModel>City}'/>
+       <Title text='{dummieModel>street} {dummieModel>street_number}'/>
+       <Title text='Tel:{dummieModel>phone/}'/>
+       <Button text="Use these direction" width="200px" press=".onNext"/>
+       <Button text="Delete direction" width="200px" press=".deleteDirection"/>
+    </VBox>
+    </f:content>
+    
+
+    </f:Card>
+    </f:GridListItem>
+</f:GridList>
+
+    
+</core:FragmentDefinition>

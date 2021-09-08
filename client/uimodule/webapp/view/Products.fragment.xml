@@ -1,0 +1,74 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:grid="sap.ui.layout.cssgrid" xmlns:card="sap.f.cards" xmlns:f="sap.f" xmlns:core="sap.ui.core">
+<grid:CSSGrid
+   gridGap="1rem">
+    <f:Card>
+	  <f:layoutData>
+	      <grid:GridItemLayoutData gridColumn="1 / 4" gridRow='1 / 4'/>
+	  </f:layoutData>
+	<f:header>
+    <card:Header title="Direction"  subtitle="Sending to" iconSrc='sap-icon://add-product'/>
+    </f:header>
+    <f:content>
+      <VBox height="220px" class="sapUiResponsiveMargin"  justifyContent="SpaceBetween">
+       <Title text='{selectedDirection>/country}'/>
+       <Title text='{selectedDirection>/postalCode}  {selectedDirection>/City}'/>
+       <Title text='{selectedDirection>/street} {selectedDirection>/street_number}'/>
+       <Title text='Tel:{selectedDirection>/phone/}'/>
+    
+       <Button text="Select Another Direction" width="100%" press=".onPreb"/>
+    </VBox>
+    
+
+  
+    </f:content>
+	
+	</f:Card>
+	<f:Card height='600px'>
+	  <f:layoutData>
+		 <grid:GridItemLayoutData gridColumn="4 / 7" gridRow='1 / 15'/>
+	  </f:layoutData>
+	<f:header>
+    <card:Header title="Products"  subtitle="Selected Products" iconSrc='sap-icon://cart'/>
+    </f:header>
+    <f:content>
+	
+	  <List mode="Delete"
+							      items="{productDisplay>/products}"
+							      enableBusyIndicator="true"
+							      delete="handleDelete">
+								<StandardListItem
+									title="{productDisplay>product}"
+									type="Active"
+									description="{productDisplay>description}"
+									icon="{productDisplay>img}"
+									info="{productDisplay>price} EUR"
+									iconDensityAware="false"
+									iconInset="false"/>
+		</List>
+    
+    
+    
+    </f:content>
+	
+					
+	
+	</f:Card>
+	
+	
+
+       <ObjectNumber
+	   class="sapMObjectNumberLarge"
+	   state="Success"
+        number="{productDisplay>/totalPrice}"
+		unit='EUR'
+        />
+    
+
+  
+    
+	
+				
+	
+	</grid:CSSGrid>
+    <Button text='Checkout' type='Emphasized' press='checkoutStep'/>
+</core:FragmentDefinition>
