@@ -250,7 +250,7 @@ sap.ui.define(
       
       checkoutStep: async function () {
         const paymentMethodsResponse = await this.callServer(
-          "/get"
+          "/srv"
         );
       
         

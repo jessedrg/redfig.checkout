@@ -21,21 +21,8 @@ server:
       configuration:
         port: 35729
         path: uimodule/webapp
-    - name: ui5-middleware-http-proxy
-      mountPath: /get
+    - name: ui5-middleware-proxy-basicauth
       afterMiddleware: compression
+      mountPath: /srv
       configuration:
-        baseUrl: http://localhost:6000
-        path: /
-    - name: ui5-middleware-http-proxy
-      mountPath: /initiatePayment
-      afterMiddleware: compression
-      configuration:
-        baseUrl: http://localhost:6000
-        path: /api/initiatePayment
-    - name: ui5-middleware-http-proxy
-      mountPath: /submitAdditionalDetails
-      afterMiddleware: compression
-      configuration:
-        baseUrl: http://localhost:6000
-        path: /api/submitAdditionalDetails
+        baseUri: "http://localhost:6000/"
