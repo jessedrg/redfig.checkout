@@ -302,6 +302,30 @@ sap.ui.define(
       adym: function () {},
       handleOnAdditionalDetails: function (state, component) {},
       handleOnChange: function (state, component) {},
+      //ALl tests Are here
+     totalPrice: function(value){
+      const products = this.getView()
+      .getModel("productModel")
+      .getProperty("/products");
+      products.push({
+        product:"tes",
+            description:"test",
+            img:"https://test.com",
+            price: value
+      })
+      let totalPrice;
+      products.map((product) => {
+        totalPrice = totalPrice + parseInt(product.price);
+      });
+
+      return totalPrice
+      console.log(totalPrice)
+
+
+
+    
+     }
     });
-  }
+  },
+  
 );
